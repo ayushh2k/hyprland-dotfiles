@@ -1,0 +1,167 @@
+{
+    "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 38, // Waybar height (to be removed for auto height)
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-bottom": 0,
+    "margin-right": 0,
+    // "width": 1280, // Waybar width
+    "spacing": 5, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [
+        "cpu",
+        "memory",
+        "battery",
+        "backlight",
+        "custom/spotify"
+    ],
+    "modules-center": [
+        "wlr/workspaces"
+    ],
+    "modules-right": [
+        "tray",
+        "pulseaudio",
+        "network",
+        "clock",
+        "custom/powermenu"
+    ],
+    // Modules configuration
+
+    "custom/powermenu": {
+			"format": "[ ⏻ ]",
+			"on-click": "wlogout",
+			"tooltip": false
+		},
+
+    "wlr/workspaces": {
+        "on-click": "activate",
+        "format": "[ {icon} ]",
+        "on-scroll-up": "hyprctl dispatch workspace e-1",
+        "on-scroll-down": "hyprctl dispatch workspace e+1",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "urgent": "",
+            // "active": "1",
+            "default": ""
+        }
+    },
+    "hyprland/window": {
+        "format": "{}"
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        "format": "[ {:%I:%M %p} ]",
+        "format-alt": "[ {:%a %b %d} ]",
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "cpu": {
+        "format": "[  {usage}% ]",
+        "max-length": 100,
+        "on-click": ""
+    },
+    "memory": {
+        "format": "[  {}% ]",
+        "interval": 30,
+        "format-alt": "[  {used:0.1f}G ]",
+        "max-length": 10
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "[ {icon} {percent}% ]",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "on-click": "",
+        "on-scroll-up": "exec brightnessctl set 5%+",
+        "on-scroll-down": "exec brightnessctl set 5%-"
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "[ {icon} {capacity}% ]",
+        "format-charging": "[  {capacity}% ]",
+        "format-plugged": "[  {capacity}% ]",
+        "format-alt": "[ {icon} {time} ]",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": [
+            " ",
+            " ",
+            " ",
+            " ",
+            " "
+        ]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "[ 直 {essid} ]",
+        "format-ethernet": " {ipaddr}/{cidr}",
+        "tooltip-format": " {ifname} via {gwaddr}",
+        "format-linked": " {ifname} (No IP)",
+        "format-disconnected": "睊",
+        "on-click": "kitty --class floating nmtui"
+        // "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "[ {icon} {volume}% ]",
+        "format-bluetooth": "  {volume}%",
+        "format-bluetooth-muted": "婢 ",
+        "format-muted": "婢",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "🎧",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "♪",
+                "♪",
+                "♪"
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+    "bluetooth": {
+        "format": " {status}"
+    },
+    "custom/spotify": {
+        "format": "[ {} ]",
+        "format-playing": "[ {} ]",
+        "exec": "~/.config/waybar/scripts/mediaplayer.sh",
+        "return-type": "json",
+        "on-click": "playerctl -p spotify play-pause",
+        "on-scroll-down": "playerctl -p spotify next",
+        "on-scroll-up": "playerctl -p spotify previous",
+        "exec-if": "pgrep spotfiy"
+    }
+}
