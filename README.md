@@ -2,7 +2,7 @@
 
 My dotfiles for Hyprland
 
-### Packages
+## Packages
 
 ```
 WM: Hyprland
@@ -12,10 +12,11 @@ Launcher: wofi
 File Manager: Nautilus 
 ```
 
-### Screenshots
+## Screenshots
+
 ![Screenshot](screenshots/screenshot.jpg)
 
-### Dependencies
+## Dependencies
 
 - [hyprland](https://github.com/vaxerski/hyprland) - Wayland Compositor/WM
 - [waybar](https://github.com/Alexays/Waybar) - Bar
@@ -34,7 +35,7 @@ File Manager: Nautilus
 - [amixer](https://man.archlinux.org/man/amixer.1.en) - Audio mixer
 - [pywal](https://github.com/dylanaraps/pywal) - Color palette generator
 
-### Keybinds
+## Keybinds
 
 `SUPER + LEFTMOUSE` - Drag to move windows
 `SUPER + RIGHTMOUSE` - Drag to resize windows
@@ -58,6 +59,7 @@ File Manager: Nautilus
 `SUPER + -` - Move a window out of a group
 `SUPER + S` - Swap active window between monitors
 
-###Tips
+## Tips
+
 - To enable wofi emoji menu follow [this](https://github.com/Zeioth/wofi-emoji).
 - To change background and terminal color palette on a certain keybind use `scripts/changewall.sh`
