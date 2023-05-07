@@ -37,27 +37,27 @@ File Manager: Nautilus
 
 ## Keybinds
 
-`SUPER + LEFTMOUSE` - Drag to move windows
-`SUPER + RIGHTMOUSE` - Drag to resize windows
-`SUPER + Q` - Open Terminal (foot)
-`SUPER + (1-9)` - Switch to Workspace (1-9)
-`SUPER + SHIFT + (1-9)` - Move active window to Workspace (1-9)
-`SUPER + SCROLLWHEEL` - Move to Previous/Next Workspace
-`SUPER + R` - Open Application Launcher (wofi)
-`SUPER + C` - Kill current window
-`SUPER + V` - Toggle Tiling/Floating Window
-`SUPER + M` - Execute wlogout
-`SUPER + E` - Open Nautilus
-`SUPER + SPACE` - Open Clipboard
-`SUPER + V` - Toggle Tiling/Floating Window
-`SUPER + SHIFT + S` - Screenshot
-`SUPER + . (period)` - Open Emoji selector
-`SUPER + backtick` - Change wallpaper and terminal color palette
-`SUPER + G` - Enable Group (Window Stacking) - drag and drop a window to stack
-`SUPER + TAB` - Change the active window within a group
-`SUPER + L` - Lock a group
-`SUPER + -` - Move a window out of a group
-`SUPER + S` - Swap active window between monitors
+- `SUPER + LEFTMOUSE` - Drag to move windows
+- `SUPER + RIGHTMOUSE` - Drag to resize windows
+- `SUPER + Q` - Open Terminal (foot)
+- `SUPER + (1-9)` - Switch to Workspace (1-9)
+- `SUPER + SHIFT + (1-9)` - Move active window to Workspace (1-9)
+- `SUPER + SCROLLWHEEL` - Move to Previous/Next Workspace
+- `SUPER + R` - Open Application Launcher (wofi)
+- `SUPER + C` - Kill current window
+- `SUPER + V` - Toggle Tiling/Floating Window
+- `SUPER + M` - Execute wlogout
+- `SUPER + E` - Open Nautilus
+- `SUPER + SPACE` - Open Clipboard
+- `SUPER + V` - Toggle Tiling/Floating Window
+- `SUPER + SHIFT + S` - Screenshot
+- `SUPER + . (period)` - Open Emoji selector
+- `SUPER + backtick` - Change wallpaper and terminal color palette
+- `SUPER + G` - Enable Group (Window Stacking) - drag and drop a window to stack
+- `SUPER + TAB` - Change the active window within a group
+- `SUPER + L` - Lock a group
+- `SUPER + -` - Move a window out of a group
+- `SUPER + S` - Swap active window between monitors
 
 ## Tips
 
